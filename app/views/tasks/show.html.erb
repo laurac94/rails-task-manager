@@ -1,0 +1,7 @@
+<h1>My task for the day</h1>
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed ? "Completed" : "Not completed" %></p>
+<%= link_to "Back", tasks_path  %>
+<%= link_to 'edit task', edit_task_path(@task)  %>
+<%= link_to 'destroy task', task_path(@task), method: :delete, data: {confirm: "Are you sure?"}  %>
